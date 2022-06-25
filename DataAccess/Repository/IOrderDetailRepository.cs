@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Repository
+namespace Assignment02.DataLayer.Repository
 {
     internal class IOrderDetailRepository
     {

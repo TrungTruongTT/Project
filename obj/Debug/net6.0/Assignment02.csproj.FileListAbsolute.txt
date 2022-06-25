@@ -1,0 +1,7 @@
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\Assignment02.csproj.AssemblyReference.cache
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\SalesWinApp.frmLogin.resources
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\SalesWinApp.frmMain.resources
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\SalesWinApp.frmMembers.resources
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\SalesWinApp.frmOrders.resources
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\SalesWinApp.frmProducts.resources
+D:\ProgramData\Project\PRN211\Assignment02\obj\Debug\net6.0\Assignment02.csproj.GenerateResource.cache

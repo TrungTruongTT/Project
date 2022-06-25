@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessObject
+namespace Assigment02.BusinessLayer
 {
-    internal class OrderObject
+    public class OrderObject
     {
+
     }
 }
