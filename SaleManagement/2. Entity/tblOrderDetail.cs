@@ -22,6 +22,6 @@ namespace SaleManagement._2._Entity
 
         public double Discount { get; set; }
 
-
+        
     }
 }

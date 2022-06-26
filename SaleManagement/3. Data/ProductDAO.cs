@@ -26,19 +26,38 @@ namespace SaleManagement._3._Data
 
         public void Update(tblProduct product)
         {
-            //db.Entry(product).State = EntityState.Modified;
-            //db.SaveChanges();
-
-            var entry = db.Entry(product);
-            if(entry.State==EntityState.Detached || entry.State == EntityState.Modified)
+            int id = product.ProductId;
+            tblProduct newproduct = getRow(id);
+            if(newproduct != null)
             {
-                db.Set<tblProduct>().Attach(product);
-                entry.State = EntityState.Modified;
+                newproduct.ProductName = product.ProductName;
+                newproduct.CategoryId = product.CategoryId;
+                newproduct.Weight = product.Weight;
+                newproduct.UnitPrice = product.UnitPrice;
+                newproduct.UnitslnStock = product.UnitslnStock;
                 db.SaveChanges();
             }
+
+            
         }
 
 
+        public tblProduct getRow(int productId)
+        {
+            tblProduct product = db.tblProduct.Where(m=>m.ProductId == productId)
+                .FirstOrDefault();
+            return product;
+        }
+
+        public void Delete(int productId)
+        {
+            tblProduct newproduct = getRow(productId);
+            if(newproduct != null)
+            {
+                db.tblProduct.Remove(newproduct);
+                db.SaveChanges();
+            }
+        }
 
     }
 

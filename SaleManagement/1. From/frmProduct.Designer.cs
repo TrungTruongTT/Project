@@ -31,33 +31,33 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtCategoryID = new System.Windows.Forms.TextBox();
+            this.txtProductID = new System.Windows.Forms.TextBox();
+            this.lbUnitPrice = new System.Windows.Forms.Label();
+            this.lbStock = new System.Windows.Forms.Label();
+            this.lbWeight = new System.Windows.Forms.Label();
+            this.lbProductName = new System.Windows.Forms.Label();
+            this.lbCategoryID = new System.Windows.Forms.Label();
+            this.lbProductID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lbProductID = new System.Windows.Forms.Label();
-            this.lbCategoryID = new System.Windows.Forms.Label();
-            this.lbProductName = new System.Windows.Forms.Label();
-            this.lbWeight = new System.Windows.Forms.Label();
-            this.lbStock = new System.Windows.Forms.Label();
-            this.lbUnitPrice = new System.Windows.Forms.Label();
-            this.txtProductID = new System.Windows.Forms.TextBox();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
-            this.txtProductName = new System.Windows.Forms.TextBox();
-            this.txtWeight = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitslnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,6 +104,102 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(714, 76);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(185, 27);
+            this.txtStock.TabIndex = 11;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(714, 33);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(185, 27);
+            this.txtPrice.TabIndex = 10;
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.Location = new System.Drawing.Point(423, 76);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(155, 27);
+            this.txtWeight.TabIndex = 9;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.Location = new System.Drawing.Point(423, 33);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(155, 27);
+            this.txtProductName.TabIndex = 8;
+            // 
+            // txtCategoryID
+            // 
+            this.txtCategoryID.Location = new System.Drawing.Point(126, 76);
+            this.txtCategoryID.Name = "txtCategoryID";
+            this.txtCategoryID.Size = new System.Drawing.Size(100, 27);
+            this.txtCategoryID.TabIndex = 7;
+            // 
+            // txtProductID
+            // 
+            this.txtProductID.Location = new System.Drawing.Point(126, 33);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(100, 27);
+            this.txtProductID.TabIndex = 6;
+            // 
+            // lbUnitPrice
+            // 
+            this.lbUnitPrice.AutoSize = true;
+            this.lbUnitPrice.Location = new System.Drawing.Point(625, 36);
+            this.lbUnitPrice.Name = "lbUnitPrice";
+            this.lbUnitPrice.Size = new System.Drawing.Size(83, 20);
+            this.lbUnitPrice.TabIndex = 5;
+            this.lbUnitPrice.Text = "Unit Price";
+            // 
+            // lbStock
+            // 
+            this.lbStock.AutoSize = true;
+            this.lbStock.Location = new System.Drawing.Point(622, 79);
+            this.lbStock.Name = "lbStock";
+            this.lbStock.Size = new System.Drawing.Size(86, 20);
+            this.lbStock.TabIndex = 4;
+            this.lbStock.Text = "Unit Stock";
+            // 
+            // lbWeight
+            // 
+            this.lbWeight.AutoSize = true;
+            this.lbWeight.Location = new System.Drawing.Point(296, 83);
+            this.lbWeight.Name = "lbWeight";
+            this.lbWeight.Size = new System.Drawing.Size(61, 20);
+            this.lbWeight.TabIndex = 3;
+            this.lbWeight.Text = "Weight";
+            // 
+            // lbProductName
+            // 
+            this.lbProductName.AutoSize = true;
+            this.lbProductName.Location = new System.Drawing.Point(280, 36);
+            this.lbProductName.Name = "lbProductName";
+            this.lbProductName.Size = new System.Drawing.Size(116, 20);
+            this.lbProductName.TabIndex = 2;
+            this.lbProductName.Text = "Product Name";
+            // 
+            // lbCategoryID
+            // 
+            this.lbCategoryID.AutoSize = true;
+            this.lbCategoryID.Location = new System.Drawing.Point(11, 83);
+            this.lbCategoryID.Name = "lbCategoryID";
+            this.lbCategoryID.Size = new System.Drawing.Size(98, 20);
+            this.lbCategoryID.TabIndex = 1;
+            this.lbCategoryID.Text = "Category ID";
+            // 
+            // lbProductID
+            // 
+            this.lbProductID.AutoSize = true;
+            this.lbProductID.Location = new System.Drawing.Point(20, 36);
+            this.lbProductID.Name = "lbProductID";
+            this.lbProductID.Size = new System.Drawing.Size(89, 20);
+            this.lbProductID.TabIndex = 0;
+            this.lbProductID.Text = "Product ID";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -118,6 +214,56 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(655, 42);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(91, 35);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(518, 42);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 35);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(381, 42);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 35);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(244, 42);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 35);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(94, 42);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(88, 35);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -148,150 +294,6 @@
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
-            // 
-            // lbProductID
-            // 
-            this.lbProductID.AutoSize = true;
-            this.lbProductID.Location = new System.Drawing.Point(20, 36);
-            this.lbProductID.Name = "lbProductID";
-            this.lbProductID.Size = new System.Drawing.Size(89, 20);
-            this.lbProductID.TabIndex = 0;
-            this.lbProductID.Text = "Product ID";
-            // 
-            // lbCategoryID
-            // 
-            this.lbCategoryID.AutoSize = true;
-            this.lbCategoryID.Location = new System.Drawing.Point(11, 83);
-            this.lbCategoryID.Name = "lbCategoryID";
-            this.lbCategoryID.Size = new System.Drawing.Size(98, 20);
-            this.lbCategoryID.TabIndex = 1;
-            this.lbCategoryID.Text = "Category ID";
-            // 
-            // lbProductName
-            // 
-            this.lbProductName.AutoSize = true;
-            this.lbProductName.Location = new System.Drawing.Point(280, 36);
-            this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(116, 20);
-            this.lbProductName.TabIndex = 2;
-            this.lbProductName.Text = "Product Name";
-            // 
-            // lbWeight
-            // 
-            this.lbWeight.AutoSize = true;
-            this.lbWeight.Location = new System.Drawing.Point(296, 83);
-            this.lbWeight.Name = "lbWeight";
-            this.lbWeight.Size = new System.Drawing.Size(61, 20);
-            this.lbWeight.TabIndex = 3;
-            this.lbWeight.Text = "Weight";
-            // 
-            // lbStock
-            // 
-            this.lbStock.AutoSize = true;
-            this.lbStock.Location = new System.Drawing.Point(622, 79);
-            this.lbStock.Name = "lbStock";
-            this.lbStock.Size = new System.Drawing.Size(86, 20);
-            this.lbStock.TabIndex = 4;
-            this.lbStock.Text = "Unit Stock";
-            // 
-            // lbUnitPrice
-            // 
-            this.lbUnitPrice.AutoSize = true;
-            this.lbUnitPrice.Location = new System.Drawing.Point(625, 36);
-            this.lbUnitPrice.Name = "lbUnitPrice";
-            this.lbUnitPrice.Size = new System.Drawing.Size(83, 20);
-            this.lbUnitPrice.TabIndex = 5;
-            this.lbUnitPrice.Text = "Unit Price";
-            // 
-            // txtProductID
-            // 
-            this.txtProductID.Location = new System.Drawing.Point(126, 33);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(100, 27);
-            this.txtProductID.TabIndex = 6;
-            // 
-            // txtCategoryID
-            // 
-            this.txtCategoryID.Location = new System.Drawing.Point(126, 76);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(100, 27);
-            this.txtCategoryID.TabIndex = 7;
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.Location = new System.Drawing.Point(423, 33);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(155, 27);
-            this.txtProductName.TabIndex = 8;
-            // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(423, 76);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(155, 27);
-            this.txtWeight.TabIndex = 9;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(714, 33);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(185, 27);
-            this.txtPrice.TabIndex = 10;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(714, 76);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(185, 27);
-            this.txtStock.TabIndex = 11;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(94, 42);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(88, 35);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(244, 42);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 35);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(381, 42);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 35);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(518, 42);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 35);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(655, 42);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(91, 35);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // ProductId
             // 

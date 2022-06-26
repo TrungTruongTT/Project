@@ -23,8 +23,6 @@ namespace SaleManagement._2._Entity
         [Column(TypeName = "money")]
         public decimal? Freight { get; set; }
 
-
-
-
+        
     }
 }

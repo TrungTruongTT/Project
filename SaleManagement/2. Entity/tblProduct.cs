@@ -10,6 +10,7 @@ namespace SaleManagement._2._Entity
     public partial class tblProduct
     {
         
+
         [Key]
         public int ProductId { get; set; }
 
@@ -28,6 +29,6 @@ namespace SaleManagement._2._Entity
 
         public int UnitslnStock { get; set; }
 
-
+        
     }
 }

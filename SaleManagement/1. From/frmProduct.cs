@@ -108,6 +108,7 @@ namespace SaleManagement._1._From
                 product.Weight = txtWeight.Text.Trim();
                 product.UnitPrice = decimal.Parse(txtPrice.Text.Trim());
                 product.UnitslnStock= int.Parse(txtStock.Text.Trim());
+                
                 switch (function)
                 {
                     case "Add":
@@ -131,6 +132,19 @@ namespace SaleManagement._1._From
                 MessageBox.Show(ex.Message, "Thông báo");
             }
             
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(txtProductID.Text.Trim());
+            productDao.Delete(productId);
+            MessageBox.Show("Xóa thành công.", "Thông báo");
+            dgvProduct.DataSource = productDao.getList();
         }
     }
 }

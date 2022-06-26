@@ -9,7 +9,7 @@ namespace SaleManagement._2._Entity
     [Table("tblMember")]
     public partial class tblMember
     {
-
+        
 
         [Key]
         public int MemberId { get; set; }
@@ -33,6 +33,7 @@ namespace SaleManagement._2._Entity
         [Required]
         [StringLength(15)]
         public string Country { get; set; }
-    }
+
         
+    }
 }
