@@ -1,0 +1,16 @@
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.csproj.AssemblyReference.cache
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.csproj.SuggestedBindingRedirects.cache
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement._1.Presentation_Layer.frmLogin.resources
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.Properties.Resources.resources
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.csproj.GenerateResource.cache
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.csproj.CoreCompileInputs.cache
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\SaleManagement.exe.config
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\SaleManagement.exe
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\SaleManagement.pdb
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.exe
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.pdb
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\EntityFramework.dll
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\EntityFramework.SqlServer.dll
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\EntityFramework.xml
+D:\TanTrung\SaleManagement\SaleManagement\bin\Debug\EntityFramework.SqlServer.xml
+D:\TanTrung\SaleManagement\SaleManagement\obj\Debug\SaleManagement.csproj.CopyComplete
