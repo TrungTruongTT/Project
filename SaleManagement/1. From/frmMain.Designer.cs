@@ -34,6 +34,7 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QLSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QLTVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QLHDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelHoten = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
@@ -46,7 +47,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.QLSPToolStripMenuItem,
-            this.QLTVToolStripMenuItem});
+            this.QLTVToolStripMenuItem,
+            this.QLHDToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(993, 30);
@@ -65,13 +67,13 @@
             // đângXuấtToolStripMenuItem
             // 
             this.đângXuấtToolStripMenuItem.Name = "đângXuấtToolStripMenuItem";
-            this.đângXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đângXuấtToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.đângXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // QLSPToolStripMenuItem
@@ -87,6 +89,13 @@
             this.QLTVToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.QLTVToolStripMenuItem.Text = "Quản lý thành viên";
             this.QLTVToolStripMenuItem.Click += new System.EventHandler(this.QLTVToolStripMenuItem_Click);
+            // 
+            // QLHDToolStripMenuItem
+            // 
+            this.QLHDToolStripMenuItem.Name = "QLHDToolStripMenuItem";
+            this.QLHDToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.QLHDToolStripMenuItem.Text = "Quản lý hóa đơn";
+            this.QLHDToolStripMenuItem.Click += new System.EventHandler(this.QLHDToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -137,5 +146,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QLSPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QLTVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QLHDToolStripMenuItem;
     }
 }

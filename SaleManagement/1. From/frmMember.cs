@@ -17,6 +17,8 @@ namespace SaleManagement._1._From
     {
         tblMember loginMember = null;
         private MemberDAO memberDAO = new MemberDAO();
+
+        private ProductDAO product = new ProductDAO(); 
         string function = null;
         public frmMember(tblMember member)
         {
@@ -26,7 +28,7 @@ namespace SaleManagement._1._From
 
         private void frmMember_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Tài khoản :" + loginMember.Email;
+            toolStripStatusLabel1.Text = "Tài khoản : " + loginMember.Email;
 
             if(loginMember.Email == "admin@fstore.com")
             {
@@ -40,9 +42,11 @@ namespace SaleManagement._1._From
             }
             else
             {
-                dgvMember.DataSource = loginMember;
+
+                
+
                 tool(false);
-                btnEdit.Enabled = false;
+                
                 btnSave.Enabled = false;
                 btnDelete.Enabled = false;
             }
@@ -53,6 +57,7 @@ namespace SaleManagement._1._From
         private void loadMember()
         {
             dgvMember.DataSource = memberDAO.getList();
+            
             
         }
 
@@ -104,21 +109,41 @@ namespace SaleManagement._1._From
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            tool(true);
-            btnSave.Enabled= true;
-            txtMemberId.Enabled = false;
-            txtEmail.Enabled= false;
-            function = "Edit";
+            if(loginMember.Email == "admin@fstore.com")
+            {
+                tool(true);
+                btnSave.Enabled = true;
+                txtMemberId.Enabled = false;
+                txtEmail.Enabled = false;
+                function = "Edit";
+            }
+            else
+            {
+                tblMember member = memberDAO.GetRowByID(loginMember.MemberId);
+                txtEmail.Text = member.Email;
+                txtMemberId.Text = member.MemberId.ToString();
+                txtPassword.Text = member.Password;
+                txtCompanyName.Text = member.CompanyName;
+                txtCity.Text = member.City;
+                txtCountry.Text = member.Country;
+
+                tool(true);
+                btnSave.Enabled = true;
+                txtMemberId.Enabled = false;
+                txtEmail.Enabled = false;
+                function = "Edit";
+            }
+            
+                
+            
+            
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
+            if(loginMember.Email != "admin@fstore.com")
             {
-                if(loginMember.Email == txtEmail.Text.Trim())
-                {
-                    throw new Exception("Không thể Edit Admin.");
-                }
                 tblMember member = new tblMember();
 
                 member.MemberId = int.Parse(txtMemberId.Text.Trim());
@@ -133,24 +158,73 @@ namespace SaleManagement._1._From
                     case "Add":
                         {
                             memberDAO.Insert(member);
-                            loadMember();
+                            clear();
                             MessageBox.Show("Thêm thành công", "Thông báo");
                             break;
                         }
                     case "Edit":
                         {
                             memberDAO.Update(member);
-                            loadMember();
+                            clear();
                             MessageBox.Show("Sửa thành công", "Thông báo");
                             break;
                         }
                 }
-
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Thông báo");
+                try
+                {
+                    if (loginMember.Email == txtEmail.Text.Trim())
+                    {
+                        throw new Exception("Không thể Edit Admin.");
+                    }
+                    tblMember member = new tblMember();
+
+                    member.MemberId = int.Parse(txtMemberId.Text.Trim());
+                    member.Password = txtPassword.Text.Trim();
+                    member.Email = txtEmail.Text.Trim();
+                    member.CompanyName = txtCompanyName.Text.Trim();
+                    member.City = txtCity.Text.Trim();
+                    member.Country = txtCountry.Text.Trim();
+
+                    switch (function)
+                    {
+                        case "Add":
+                            {
+                                memberDAO.Insert(member);
+                                loadMember();
+                                MessageBox.Show("Thêm thành công", "Thông báo");
+                                clear();
+                                break;
+                            }
+                        case "Edit":
+                            {
+                                memberDAO.Update(member);
+                                loadMember();
+                                MessageBox.Show("Sửa thành công", "Thông báo");
+                                clear();
+                                break;
+                            }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Thông báo");
+                }
             }
+            
+        }
+
+        private void clear()
+        {
+            txtMemberId.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtCompanyName.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtCountry.Text = String.Empty;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

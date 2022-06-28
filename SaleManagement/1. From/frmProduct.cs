@@ -24,7 +24,7 @@ namespace SaleManagement._1._From
 
         private void frmProduct_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Tài khoản :" + loginMember.Email;
+            toolStripStatusLabel1.Text = "Tài khoản : " + loginMember.Email;
             loadProduct();
             tool(false);
             btnEdit.Enabled= false;
@@ -116,6 +116,7 @@ namespace SaleManagement._1._From
                             productDao.Insert(product);
                             loadProduct();
                             MessageBox.Show("Thêm thành công.", "Thông báo");
+                            clear();
                             break;
                         }
                     case "Edit":
@@ -123,6 +124,7 @@ namespace SaleManagement._1._From
                             productDao.Update(product);
                             loadProduct();
                             MessageBox.Show("Sửa thành công.", "Thông báo");
+                            clear();
                             break;
                         }
                 }
@@ -132,6 +134,16 @@ namespace SaleManagement._1._From
                 MessageBox.Show(ex.Message, "Thông báo");
             }
             
+        }
+
+        private void clear()
+        {
+            txtProductID.Text = string.Empty;
+            txtCategoryID.Text = string.Empty;
+            txtProductName.Text = string.Empty;
+            txtWeight.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            txtStock.Text = string.Empty;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

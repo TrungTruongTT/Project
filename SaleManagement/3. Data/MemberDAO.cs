@@ -20,8 +20,11 @@ namespace SaleManagement._3._Data
 
         public List<tblMember> getList()
         {
+            
             return db.tblMember.ToList();
         }
+
+        
 
         public void Insert(tblMember member)
         {

@@ -22,7 +22,7 @@ namespace SaleManagement._1.Presentation_Layer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelHoten.Text = "Tài khoản :"+loginMember.Email;
+            toolStripStatusLabelHoten.Text = "Tài khoản : "+loginMember.Email;
         }
 
         private void QLSPToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +49,12 @@ namespace SaleManagement._1.Presentation_Layer
                 Form frmmember = new frmMember(loginMember);
                 frmmember.ShowDialog();
             
+        }
+
+        private void QLHDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmorder = new frmOrder(loginMember);
+            frmorder.ShowDialog();
         }
     }
 }

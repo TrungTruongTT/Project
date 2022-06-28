@@ -46,6 +46,7 @@ namespace SaleManagement._1.Presentation_Layer
 
                 string tenDangNhap = txtEmail.Text.Trim();
                 string matkhau = txtPassword.Text.Trim();
+
                 tblMember member = memberDao.getRow(tenDangNhap);
 
                 if (member == null)
