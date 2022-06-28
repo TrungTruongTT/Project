@@ -158,15 +158,19 @@ namespace SaleManagement._1._From
                     case "Add":
                         {
                             memberDAO.Insert(member);
-                            clear();
                             MessageBox.Show("Thêm thành công", "Thông báo");
+                            clear();
+                            tool(false);
+                            btnSave.Enabled=false;
                             break;
                         }
                     case "Edit":
                         {
                             memberDAO.Update(member);
-                            clear();
                             MessageBox.Show("Sửa thành công", "Thông báo");
+                            clear();
+                            tool(false);
+                            btnSave.Enabled = false;
                             break;
                         }
                 }
@@ -196,6 +200,9 @@ namespace SaleManagement._1._From
                                 loadMember();
                                 MessageBox.Show("Thêm thành công", "Thông báo");
                                 clear();
+                                tool(false);
+                                btnSave.Enabled = false;
+                                btnDelete.Enabled = false;
                                 break;
                             }
                         case "Edit":
@@ -204,6 +211,9 @@ namespace SaleManagement._1._From
                                 loadMember();
                                 MessageBox.Show("Sửa thành công", "Thông báo");
                                 clear();
+                                tool(false);
+                                btnSave.Enabled = false;
+                                btnDelete.Enabled = false;
                                 break;
                             }
                     }

@@ -117,6 +117,9 @@ namespace SaleManagement._1._From
                             loadProduct();
                             MessageBox.Show("Thêm thành công.", "Thông báo");
                             clear();
+                            tool(false);
+                            btnSave.Enabled = false;
+                            btnDelete.Enabled = false;
                             break;
                         }
                     case "Edit":
@@ -125,6 +128,9 @@ namespace SaleManagement._1._From
                             loadProduct();
                             MessageBox.Show("Sửa thành công.", "Thông báo");
                             clear();
+                            tool(false);
+                            btnSave.Enabled = false;
+                            btnDelete.Enabled = false;
                             break;
                         }
                 }
