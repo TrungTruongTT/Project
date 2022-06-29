@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.requireDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.orderDate = new System.Windows.Forms.DateTimePicker();
+            this.txtrequireDate = new System.Windows.Forms.DateTimePicker();
+            this.txtshippedDate = new System.Windows.Forms.DateTimePicker();
+            this.txtorderDate = new System.Windows.Forms.DateTimePicker();
             this.cboMemberID = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFreight = new System.Windows.Forms.TextBox();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lborderDate = new System.Windows.Forms.Label();
             this.lbRQDate = new System.Windows.Forms.Label();
@@ -42,26 +42,36 @@
             this.lbMemberID = new System.Windows.Forms.Label();
             this.lborderID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.lbProductID = new System.Windows.Forms.Label();
-            this.lbUnitPrice = new System.Windows.Forms.Label();
-            this.lbDiscount = new System.Windows.Forms.Label();
-            this.lbQuantity = new System.Windows.Forms.Label();
-            this.cboProductID = new System.Windows.Forms.ComboBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtUnitPrice = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.cboProductID = new System.Windows.Forms.ComboBox();
+            this.lbQuantity = new System.Windows.Forms.Label();
+            this.lbDiscount = new System.Windows.Forms.Label();
+            this.lbUnitPrice = new System.Windows.Forms.Label();
+            this.lbProductID = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RequiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShippedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Freight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,11 +84,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.requireDate);
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Controls.Add(this.orderDate);
+            this.groupBox1.Controls.Add(this.txtrequireDate);
+            this.groupBox1.Controls.Add(this.txtshippedDate);
+            this.groupBox1.Controls.Add(this.txtorderDate);
             this.groupBox1.Controls.Add(this.cboMemberID);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtFreight);
             this.groupBox1.Controls.Add(this.txtOrderID);
             this.groupBox1.Controls.Add(this.lborderDate);
             this.groupBox1.Controls.Add(this.lbRQDate);
@@ -94,26 +104,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin order";
             // 
-            // requireDate
+            // txtrequireDate
             // 
-            this.requireDate.Location = new System.Drawing.Point(375, 89);
-            this.requireDate.Name = "requireDate";
-            this.requireDate.Size = new System.Drawing.Size(221, 22);
-            this.requireDate.TabIndex = 13;
+            this.txtrequireDate.Location = new System.Drawing.Point(375, 89);
+            this.txtrequireDate.Name = "txtrequireDate";
+            this.txtrequireDate.Size = new System.Drawing.Size(221, 22);
+            this.txtrequireDate.TabIndex = 13;
             // 
-            // dateTimePicker3
+            // txtshippedDate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(718, 26);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(211, 22);
-            this.dateTimePicker3.TabIndex = 12;
+            this.txtshippedDate.Location = new System.Drawing.Point(718, 26);
+            this.txtshippedDate.Name = "txtshippedDate";
+            this.txtshippedDate.Size = new System.Drawing.Size(211, 22);
+            this.txtshippedDate.TabIndex = 12;
             // 
-            // orderDate
+            // txtorderDate
             // 
-            this.orderDate.Location = new System.Drawing.Point(354, 27);
-            this.orderDate.Name = "orderDate";
-            this.orderDate.Size = new System.Drawing.Size(221, 22);
-            this.orderDate.TabIndex = 10;
+            this.txtorderDate.Location = new System.Drawing.Point(354, 27);
+            this.txtorderDate.Name = "txtorderDate";
+            this.txtorderDate.Size = new System.Drawing.Size(221, 22);
+            this.txtorderDate.TabIndex = 10;
             // 
             // cboMemberID
             // 
@@ -123,12 +133,12 @@
             this.cboMemberID.Size = new System.Drawing.Size(121, 24);
             this.cboMemberID.TabIndex = 9;
             // 
-            // textBox3
+            // txtFreight
             // 
-            this.textBox3.Location = new System.Drawing.Point(717, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtFreight.Location = new System.Drawing.Point(717, 83);
+            this.txtFreight.Name = "txtFreight";
+            this.txtFreight.Size = new System.Drawing.Size(100, 22);
+            this.txtFreight.TabIndex = 8;
             // 
             // txtOrderID
             // 
@@ -206,6 +216,51 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(675, 21);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 26);
+            this.btnReport.TabIndex = 4;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(544, 21);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 26);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(413, 21);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 26);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(282, 21);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 26);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(151, 21);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 26);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvOrder);
@@ -220,12 +275,20 @@
             // dgvOrder
             // 
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderId,
+            this.MemberId,
+            this.OrderDate,
+            this.RequiredDate,
+            this.ShippedDate,
+            this.Freight});
             this.dgvOrder.Location = new System.Drawing.Point(6, 26);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 24;
             this.dgvOrder.Size = new System.Drawing.Size(923, 113);
             this.dgvOrder.TabIndex = 0;
+            this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
             // groupBox4
             // 
@@ -241,48 +304,17 @@
             // dgvDetail
             // 
             this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.UnitPrice,
+            this.Quantity,
+            this.Discount});
             this.dgvDetail.Location = new System.Drawing.Point(6, 25);
             this.dgvDetail.Name = "dgvDetail";
             this.dgvDetail.RowHeadersWidth = 51;
             this.dgvDetail.RowTemplate.Height = 24;
             this.dgvDetail.Size = new System.Drawing.Size(923, 63);
             this.dgvDetail.TabIndex = 0;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(151, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 26);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(282, 21);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 26);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(413, 21);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 26);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(544, 21);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 26);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -301,41 +333,34 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin order details";
             // 
-            // btnReport
+            // txtDiscount
             // 
-            this.btnReport.Location = new System.Drawing.Point(675, 21);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(75, 26);
-            this.btnReport.TabIndex = 4;
-            this.btnReport.Text = "Report";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.txtDiscount.Location = new System.Drawing.Point(559, 60);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(121, 22);
+            this.txtDiscount.TabIndex = 8;
             // 
-            // lbProductID
+            // txtUnitPrice
             // 
-            this.lbProductID.AutoSize = true;
-            this.lbProductID.Location = new System.Drawing.Point(42, 32);
-            this.lbProductID.Name = "lbProductID";
-            this.lbProductID.Size = new System.Drawing.Size(69, 16);
-            this.lbProductID.TabIndex = 1;
-            this.lbProductID.Text = "Product ID";
+            this.txtUnitPrice.Location = new System.Drawing.Point(559, 29);
+            this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.Size = new System.Drawing.Size(121, 22);
+            this.txtUnitPrice.TabIndex = 7;
             // 
-            // lbUnitPrice
+            // txtQuantity
             // 
-            this.lbUnitPrice.AutoSize = true;
-            this.lbUnitPrice.Location = new System.Drawing.Point(489, 32);
-            this.lbUnitPrice.Name = "lbUnitPrice";
-            this.lbUnitPrice.Size = new System.Drawing.Size(64, 16);
-            this.lbUnitPrice.TabIndex = 2;
-            this.lbUnitPrice.Text = "Unit Price";
+            this.txtQuantity.Location = new System.Drawing.Point(118, 66);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(121, 22);
+            this.txtQuantity.TabIndex = 6;
             // 
-            // lbDiscount
+            // cboProductID
             // 
-            this.lbDiscount.AutoSize = true;
-            this.lbDiscount.Location = new System.Drawing.Point(489, 66);
-            this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(59, 16);
-            this.lbDiscount.TabIndex = 3;
-            this.lbDiscount.Text = "Discount";
+            this.cboProductID.FormattingEnabled = true;
+            this.cboProductID.Location = new System.Drawing.Point(118, 23);
+            this.cboProductID.Name = "cboProductID";
+            this.cboProductID.Size = new System.Drawing.Size(121, 24);
+            this.cboProductID.TabIndex = 5;
             // 
             // lbQuantity
             // 
@@ -346,34 +371,32 @@
             this.lbQuantity.TabIndex = 4;
             this.lbQuantity.Text = "Quantity";
             // 
-            // cboProductID
+            // lbDiscount
             // 
-            this.cboProductID.FormattingEnabled = true;
-            this.cboProductID.Location = new System.Drawing.Point(118, 23);
-            this.cboProductID.Name = "cboProductID";
-            this.cboProductID.Size = new System.Drawing.Size(121, 24);
-            this.cboProductID.TabIndex = 5;
+            this.lbDiscount.AutoSize = true;
+            this.lbDiscount.Location = new System.Drawing.Point(489, 66);
+            this.lbDiscount.Name = "lbDiscount";
+            this.lbDiscount.Size = new System.Drawing.Size(59, 16);
+            this.lbDiscount.TabIndex = 3;
+            this.lbDiscount.Text = "Discount";
             // 
-            // txtQuantity
+            // lbUnitPrice
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(118, 66);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(121, 22);
-            this.txtQuantity.TabIndex = 6;
+            this.lbUnitPrice.AutoSize = true;
+            this.lbUnitPrice.Location = new System.Drawing.Point(489, 32);
+            this.lbUnitPrice.Name = "lbUnitPrice";
+            this.lbUnitPrice.Size = new System.Drawing.Size(64, 16);
+            this.lbUnitPrice.TabIndex = 2;
+            this.lbUnitPrice.Text = "Unit Price";
             // 
-            // txtUnitPrice
+            // lbProductID
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(559, 29);
-            this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(121, 22);
-            this.txtUnitPrice.TabIndex = 7;
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Location = new System.Drawing.Point(559, 60);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(121, 22);
-            this.txtDiscount.TabIndex = 8;
+            this.lbProductID.AutoSize = true;
+            this.lbProductID.Location = new System.Drawing.Point(42, 32);
+            this.lbProductID.Name = "lbProductID";
+            this.lbProductID.Size = new System.Drawing.Size(69, 16);
+            this.lbProductID.TabIndex = 1;
+            this.lbProductID.Text = "Product ID";
             // 
             // statusStrip1
             // 
@@ -391,6 +414,86 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 20);
             this.toolStripStatusLabel1.Text = "Email";
+            // 
+            // OrderId
+            // 
+            this.OrderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OrderId.DataPropertyName = "OrderId";
+            this.OrderId.HeaderText = "Order ID";
+            this.OrderId.MinimumWidth = 6;
+            this.OrderId.Name = "OrderId";
+            // 
+            // MemberId
+            // 
+            this.MemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MemberId.DataPropertyName = "MemberId";
+            this.MemberId.HeaderText = "Member ID";
+            this.MemberId.MinimumWidth = 6;
+            this.MemberId.Name = "MemberId";
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OrderDate.DataPropertyName = "OrderDate";
+            this.OrderDate.HeaderText = "Order Date";
+            this.OrderDate.MinimumWidth = 6;
+            this.OrderDate.Name = "OrderDate";
+            // 
+            // RequiredDate
+            // 
+            this.RequiredDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RequiredDate.DataPropertyName = "RequiredDate";
+            this.RequiredDate.HeaderText = "Required Date";
+            this.RequiredDate.MinimumWidth = 6;
+            this.RequiredDate.Name = "RequiredDate";
+            // 
+            // ShippedDate
+            // 
+            this.ShippedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ShippedDate.DataPropertyName = "ShippedDate";
+            this.ShippedDate.HeaderText = "Shipped Date";
+            this.ShippedDate.MinimumWidth = 6;
+            this.ShippedDate.Name = "ShippedDate";
+            // 
+            // Freight
+            // 
+            this.Freight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Freight.DataPropertyName = "Freight";
+            this.Freight.HeaderText = "Freight";
+            this.Freight.MinimumWidth = 6;
+            this.Freight.Name = "Freight";
+            // 
+            // ProductId
+            // 
+            this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.HeaderText = "Product ID";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UnitPrice.DataPropertyName = "UnitPrice";
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            // 
+            // Discount
+            // 
+            this.Discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Discount.DataPropertyName = "Discount";
+            this.Discount.HeaderText = "Discount";
+            this.Discount.MinimumWidth = 6;
+            this.Discount.Name = "Discount";
             // 
             // frmOrder
             // 
@@ -432,17 +535,17 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lborderID;
         private System.Windows.Forms.DataGridView dgvDetail;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker orderDate;
+        private System.Windows.Forms.DateTimePicker txtshippedDate;
+        private System.Windows.Forms.DateTimePicker txtorderDate;
         private System.Windows.Forms.ComboBox cboMemberID;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFreight;
         private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label lborderDate;
         private System.Windows.Forms.Label lbRQDate;
         private System.Windows.Forms.Label lbshipDate;
         private System.Windows.Forms.Label lbFreight;
         private System.Windows.Forms.Label lbMemberID;
-        private System.Windows.Forms.DateTimePicker requireDate;
+        private System.Windows.Forms.DateTimePicker txtrequireDate;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
@@ -459,5 +562,15 @@
         private System.Windows.Forms.Label lbProductID;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MemberId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RequiredDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShippedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Freight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
     }
 }

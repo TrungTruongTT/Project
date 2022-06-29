@@ -91,6 +91,7 @@
     <Compile Include="2. Entity\tblOrderDetail.cs" />
     <Compile Include="2. Entity\tblProduct.cs" />
     <Compile Include="3. Data\MemberDAO.cs" />
+    <Compile Include="3. Data\OrderDAO.cs" />
     <Compile Include="3. Data\ProductDAO.cs" />
     <Compile Include="4. Business Object\MemberObject.cs" />
     <Compile Include="4. Business Object\OrderDetailObject.cs" />
