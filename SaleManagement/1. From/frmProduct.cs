@@ -41,8 +41,8 @@ namespace SaleManagement._1._From
         private void tool(Boolean check)
         {
             txtCategoryID.Enabled = check;
-            txtProductID.Enabled = check;
-            txtProductName.Enabled = check;
+            //txtProductID.Enabled = check;
+            //txtProductName.Enabled = check;
             txtWeight.Enabled = check;
             txtWeight.Enabled = check;
             txtPrice.Enabled = check;
@@ -163,6 +163,26 @@ namespace SaleManagement._1._From
             productDao.Delete(productId);
             MessageBox.Show("Xóa thành công.", "Thông báo");
             dgvProduct.DataSource = productDao.getList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int productId = int.Parse(txtProductID.Text.Trim());
+            
+            
+                loadSearch(productId);
+            
+                
+            
+            
+
+        }
+
+        
+
+        private void loadSearch(int productId)
+        {
+            dgvProduct.DataSource = productDao.getListSearch(productId);
         }
     }
 }

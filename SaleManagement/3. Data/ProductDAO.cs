@@ -24,6 +24,13 @@ namespace SaleManagement._3._Data
             db.SaveChanges();
         }
 
+        
+
+        public List<tblProduct> getListSearch(int productId)
+        {
+            return db.tblProduct.Where(m=>m.ProductId==productId).ToList();
+        }
+
         public void Update(tblProduct product)
         {
             int id = product.ProductId;
