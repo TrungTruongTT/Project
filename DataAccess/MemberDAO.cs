@@ -1,7 +1,12 @@
-﻿namespace Assignment02.DataLayer
-{
-    public class MemberDAO
-    {
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace DataAccess
+{
+    internal class MemberDAO
+    {
     }
 }
